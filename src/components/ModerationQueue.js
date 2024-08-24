@@ -6,13 +6,13 @@ function ModerationQueue() {
 
   useEffect(() => {
     // Fetch moderation queue data from backend
-    axios.get('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec').then((response) => {
+    axios.get('https://script.google.com/macros/s/AKfycbxJrEF8u-Muyqc85ffPKpOI4Lw9udcOtANMjoRQq6HKNcaEcak_CW9k3Dcf6opeZsz0/exec').then((response) => {
       setQueue(response.data);
     });
   }, []);
 
   const handleAction = (id, action) => {
-    axios.post('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+    axios.post('https://script.google.com/macros/s/AKfycbxJrEF8u-Muyqc85ffPKpOI4Lw9udcOtANMjoRQq6HKNcaEcak_CW9k3Dcf6opeZsz0/exec', {
       id,
       action,
     }).then(() => {
